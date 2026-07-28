@@ -72,16 +72,16 @@ http://127.0.0.1:5000
 
 ## 📸 Screenshots
 
-- Home Page
+# Home Page
 ![Home Page](screenshots/home.png)
 
-- Positive Prediction
+# Positive Prediction
 ![Positive Prediction](screenshots/positive.png)
 
-- Negative Prediction
+# Negative Prediction
 ![Negative Prediction](screenshots/negative.png)
 
-- Neutral Prediction
+# Neutral Prediction
 ![Neutral Prediction](screenshots/neutral.png)
 
 ---
