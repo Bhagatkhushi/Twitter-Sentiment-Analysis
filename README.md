@@ -10,6 +10,12 @@ This project analyzes Twitter text using Natural Language Processing (NLP). User
 
 ---
 
+## Live Demo
+
+🔗 https://twitter-sentiment-analysis-0avc.onrender.com/
+
+---
+
 ## ✨ Features
 
 - Tweet Sentiment Prediction
