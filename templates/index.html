@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <!-- Meta Information -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Page Title -->
+    <title>Twitter Sentiment Analysis</title>
+
+    <!-- External CSS -->
+    <link
+        rel="stylesheet"
+        href="{{ url_for('static', filename='style.css') }}"
+    >
+
+</head>
+
+<body>
+
+    <!-- Main Container -->
+    <div class="container">
+
+        <!-- Heading -->
+        <h1>Twitter Sentiment Analysis</h1>
+
+        <p class="subtitle">
+            Enter a tweet and predict its sentiment using Machine Learning.
+        </p>
+
+        <!-- Prediction Form -->
+        <form method="POST">
+
+            <label for="tweet" class="sr-only">
+                Tweet Input
+            </label>
+
+            <textarea
+                id="tweet"
+                name="tweet"
+                placeholder="Type your tweet here..."
+                required
+            ></textarea>
+
+            <button type="submit">
+                Analyze Sentiment 🚀
+            </button>
+
+        </form>
+
+        <!-- Prediction Result -->
+        {% if prediction %}
+
+        <div class="result">
+
+            <h2>Prediction</h2>
+
+            <!-- Sentiment Badge -->
+            <p class="prediction {{ sentiment_class }}">
+                {{ emoji }} {{ prediction }}
+            </p>
+
+            <!-- Confidence -->
+            <p class="confidence">
+                Confidence Score:
+                <strong>{{ confidence }}%</strong>
+            </p>
+
+            <!-- Progress Bar -->
+            <div class="progress-bar">
+
+                <div
+                    class="progress-fill"
+                    style="width: {{ confidence }}%;"
+                ></div>
+
+            </div>
+
+        </div>
+
+        {% endif %}
+
+    </div>
+
+</body>
+
+</html>
