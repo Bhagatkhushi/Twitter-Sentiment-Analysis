@@ -1,4 +1,4 @@
-# 🐦 Twitter Sentiment Analysis
+# Twitter Sentiment Analysis
 
 A Machine Learning web application that predicts the sentiment of tweets as **Positive 😊, Negative 😠, or Neutral 😐** using **TF-IDF** and **Naive Bayes**.
 
@@ -72,10 +72,17 @@ http://127.0.0.1:5000
 
 ## 📸 Screenshots
 
-- Home Page
-- Positive Prediction
-- Negative Prediction
-- Neutral Prediction
+# Home Page
+![Home Page](screenshots/home.png)
+
+# Positive Prediction
+![Positive Prediction](screenshots/positive.png)
+
+# Negative Prediction
+![Negative Prediction](screenshots/negative.png)
+
+# Neutral Prediction
+![Neutral Prediction](screenshots/neutral.png)
 
 ---
 
