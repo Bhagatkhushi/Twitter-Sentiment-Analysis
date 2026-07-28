@@ -1,8 +1,11 @@
 from flask import Flask, render_template, request
 import joblib
+import nltk
 import re
 import string
 from nltk.corpus import stopwords
+
+nltk.download("stopwords")
 
 # -------------------------------------------------
 # Flask Application
