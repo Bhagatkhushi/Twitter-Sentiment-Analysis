@@ -12,6 +12,9 @@ This project analyzes Twitter text using Natural Language Processing (NLP). User
 
 ## Live Demo
 
+🔗 https://twitter-sentiment-analysis-opal.vercel.app/
+
+Alternative Demo:
 🔗 https://twitter-sentiment-analysis-0avc.onrender.com/
 
 ---
