@@ -5,7 +5,6 @@ import re
 import string
 from nltk.corpus import stopwords
 
-nltk.download("stopwords")
 
 # -------------------------------------------------
 # Flask Application
@@ -44,7 +43,10 @@ def clean_text(text):
 
     text = re.sub(r"\s+", " ", text).strip()
 
-    stop_words = set(stopwords.words("english"))
+    try:
+        stop_words = set(stopwords.words("english"))
+    except LookupError:
+        stop_words = set()
 
     words = [
         word
