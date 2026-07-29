@@ -1,7 +1,7 @@
 /* ==========================================================
    Twitter Sentiment Analysis
-   Professional UI Stylesheet
-   ========================================================== */
+   Professional Glassmorphism UI
+========================================================== */
 
 /* Reset */
 
@@ -9,19 +9,24 @@
     margin:0;
     padding:0;
     box-sizing:border-box;
-    font-family:"Segoe UI",sans-serif;
+    font-family:"Segoe UI",Tahoma,Geneva,Verdana,sans-serif;
 }
 
 /* ==========================================================
-   Animated Background
-   ========================================================== */
+   Body
+========================================================== */
 
 body{
+
     min-height:100vh;
+
     display:flex;
+    flex-direction:column;
+
     justify-content:center;
     align-items:center;
-    padding:25px;
+
+    padding:30px;
 
     background:linear-gradient(
         -45deg,
@@ -33,7 +38,10 @@ body{
 
     background-size:400% 400%;
     animation:bgAnimation 12s ease infinite;
+
 }
+
+/* Background Animation */
 
 @keyframes bgAnimation{
 
@@ -52,66 +60,75 @@ body{
 }
 
 /* ==========================================================
-   Glass Card
-   ========================================================== */
+   Main Card
+========================================================== */
 
 .container{
 
     width:100%;
-    max-width:720px;
+    max-width:760px;
 
     padding:40px;
 
-    border-radius:25px;
+    border-radius:24px;
 
-    background:rgba(255,255,255,.18);
-
-    backdrop-filter:blur(18px);
+    background:rgba(255,255,255,.15);
 
     border:1px solid rgba(255,255,255,.25);
 
-    box-shadow:0 20px 45px rgba(0,0,0,.25);
+    backdrop-filter:blur(18px);
+
+    box-shadow:0 20px 50px rgba(0,0,0,.25);
 
 }
 
 /* ==========================================================
-   Headings
-   ========================================================== */
+   Heading
+========================================================== */
 
 h1{
 
     text-align:center;
-    color:#fff;
-    font-size:40px;
+
+    color:#ffffff;
+
+    font-size:42px;
+
+    margin-bottom:15px;
 
 }
 
 .subtitle{
 
-    margin:15px 0 30px;
-
     text-align:center;
 
     color:#eeeeee;
+
+    margin-bottom:30px;
+
+    font-size:18px;
 
 }
 
 /* ==========================================================
    Textarea
-   ========================================================== */
+========================================================== */
 
 textarea{
 
     width:100%;
+
     height:180px;
 
-    padding:18px;
-
     border:none;
-    border-radius:18px;
+
+    outline:none;
 
     resize:none;
-    outline:none;
+
+    border-radius:18px;
+
+    padding:18px;
 
     font-size:17px;
 
@@ -123,13 +140,13 @@ textarea:focus{
 
     transform:scale(1.01);
 
-    box-shadow:0 0 15px rgba(255,255,255,.35);
+    box-shadow:0 0 18px rgba(255,255,255,.35);
 
 }
 
 /* ==========================================================
    Button
-   ========================================================== */
+========================================================== */
 
 button{
 
@@ -140,6 +157,7 @@ button{
     padding:16px;
 
     border:none;
+
     border-radius:18px;
 
     background:#ffffff;
@@ -147,6 +165,7 @@ button{
     color:#4F46E5;
 
     font-size:18px;
+
     font-weight:700;
 
     cursor:pointer;
@@ -157,15 +176,15 @@ button{
 
 button:hover{
 
-    transform:translateY(-4px);
+    transform:translateY(-3px);
 
     box-shadow:0 15px 30px rgba(0,0,0,.25);
 
 }
 
 /* ==========================================================
-   Result Card
-   ========================================================== */
+   Result
+========================================================== */
 
 .result{
 
@@ -177,11 +196,9 @@ button:hover{
 
     text-align:center;
 
-    background:rgba(255,255,255,.18);
+    background:rgba(255,255,255,.12);
 
-    backdrop-filter:blur(10px);
-
-    animation:fadeInUp .5s ease;
+    animation:fadeIn .5s ease;
 
 }
 
@@ -195,7 +212,7 @@ button:hover{
 
 /* ==========================================================
    Prediction Badge
-   ========================================================== */
+========================================================== */
 
 .prediction{
 
@@ -203,32 +220,31 @@ button:hover{
 
     padding:12px 28px;
 
-    border-radius:50px;
+    border-radius:40px;
+
+    color:#ffffff;
 
     font-size:22px;
+
     font-weight:700;
-
-    color:#fff;
-
-    animation:pop .4s ease;
 
 }
 
 .positive{
 
-    background:linear-gradient(135deg,#00c853,#43a047);
+    background:#16a34a;
 
 }
 
 .negative{
 
-    background:linear-gradient(135deg,#e53935,#ff5252);
+    background:#dc2626;
 
 }
 
 .neutral{
 
-    background:linear-gradient(135deg,#fbc02d,#ffd54f);
+    background:#facc15;
 
     color:#222;
 
@@ -236,21 +252,19 @@ button:hover{
 
 /* ==========================================================
    Confidence
-   ========================================================== */
+========================================================== */
 
 .confidence{
 
     margin-top:18px;
 
-    color:#fff;
-
-    font-size:16px;
+    color:#ffffff;
 
 }
 
 /* ==========================================================
    Progress Bar
-   ========================================================== */
+========================================================== */
 
 .progress-bar{
 
@@ -258,7 +272,7 @@ button:hover{
 
     height:12px;
 
-    margin-top:12px;
+    margin-top:15px;
 
     border-radius:50px;
 
@@ -272,14 +286,12 @@ button:hover{
 
     height:100%;
 
-    width:0;
-
     border-radius:50px;
 
     background:linear-gradient(
         90deg,
-        #00e676,
-        #00c853
+        #22c55e,
+        #16a34a
     );
 
     transition:width .8s ease;
@@ -287,28 +299,72 @@ button:hover{
 }
 
 /* ==========================================================
-   Animations
-   ========================================================== */
+   Footer
+========================================================== */
 
-@keyframes pop{
+footer{
 
-    from{
+    width:100%;
 
-        opacity:0;
-        transform:scale(.8);
+    margin-top:35px;
 
-    }
+    padding:18px 20px;
 
-    to{
+    text-align:center;
 
-        opacity:1;
-        transform:scale(1);
+    background:rgba(255,255,255,.12);
 
-    }
+    backdrop-filter:blur(12px);
+
+    border-top:1px solid rgba(255,255,255,.20);
+
+    color:#ffffff;
+
+    font-size:15px;
 
 }
 
-@keyframes fadeInUp{
+footer p{
+
+    margin:0;
+
+    line-height:1.5;
+
+    font-weight:500;
+
+}
+
+footer strong{
+
+    color:#FFD700;
+
+    font-weight:700;
+
+}
+
+/* ==========================================================
+   Screen Reader
+========================================================== */
+
+.sr-only{
+
+    position:absolute;
+
+    width:1px;
+
+    height:1px;
+
+    overflow:hidden;
+
+    clip:rect(0,0,0,0);
+
+}
+
+/* ==========================================================
+   Animation
+========================================================== */
+
+@keyframes fadeIn{
 
     from{
 
@@ -330,13 +386,11 @@ button:hover{
 
 /* ==========================================================
    Responsive
-   ========================================================== */
+========================================================== */
 
 @media(max-width:768px){
 
     .container{
-
-        width:92%;
 
         padding:25px;
 
@@ -344,7 +398,7 @@ button:hover{
 
     h1{
 
-        font-size:30px;
+        font-size:32px;
 
     }
 
@@ -366,30 +420,22 @@ button:hover{
 
         font-size:20px;
 
-        padding:10px 22px;
+    }
+
+    footer{
+
+        margin-top:25px;
+
+        padding:15px 12px;
 
     }
 
-}
+    footer p{
 
-/* Screen Reader Only */
+        font-size:13px;
 
-.sr-only{
+        line-height:1.4;
 
-    position:absolute;
-
-    width:1px;
-    height:1px;
-
-    padding:0;
-    margin:-1px;
-
-    overflow:hidden;
-
-    clip:rect(0,0,0,0);
-
-    white-space:nowrap;
-
-    border:0;
+    }
 
 }
